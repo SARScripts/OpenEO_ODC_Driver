@@ -21,15 +21,22 @@ gdal, xarray, rioxarray, dask, numpy, scipy, opencv and their dependencies.
 python main.py ./process_graphs/EVI_L1C_D22.json --local 1
 ```
 
-## Implemented OpenEO processes
+## Implemented OpenEO processes. See the official API [here](https://processes.openeo.org/)
 
-- load_collection
-- save_result (PNG,GTIFF,NETCDF)
+<details><summary>aggregate & resample</summary>
+- resample_cube_temporal
 - resample_spatial
-- multiply
-- divide
-- subtract
-- add
+</details>
+<details><summary>arrays</summary>
+- array_element
+
+</details>
+<details><summary>climatology</summary>
+- climatological_normal (only monthly frquency at the moment)
+- anomaly (only monthly frquency at the moment)
+
+</details>
+<details><summary>comparison</summary>
 - if
 - lt
 - lte
@@ -37,14 +44,40 @@ python main.py ./process_graphs/EVI_L1C_D22.json --local 1
 - gte
 - eq
 - neq
+  
+</details>
+<details><summary>cubes</summary>
+- load_collection
+- save_result (PNG,GTIFF,NETCDF)
+- reduce_dimension (dimensions: t (or temporal), bands)
+- filter_bands
+- filter_temporal
+- rename_labels
+- merge_cubes
+- apply
+</details>
+<details><summary>development</summary></details>
+<details><summary>export</summary></details>
+<details><summary>filter</summary></details>
+<details><summary>import</summary></details>
+<details><summary>logic</summary>
 - and
 - or
+  
+</details>
+<details><summary>masks</summary>
+- mask
+
+</details>
+<details><summary>math</summary>
+- multiply
+- divide
+- subtract
+- add
 - sum
 - product
 - sqrt
-- array_element
 - normalized_difference
-- reduce_dimension (dimensions: t (or temporal), bands)
 - min
 - max
 - mean
@@ -52,17 +85,25 @@ python main.py ./process_graphs/EVI_L1C_D22.json --local 1
 - power
 - absolute
 - linear_scale_range
-- filter_bands
-- filter_temporal
-- rename_labels
-- merge_cubes
-- apply
-- mask
-- climatological_normal (only monthly frquency at the moment)
-- anomaly (only monthly frquency at the moment)
+</details>
+<details><summary>reducer</summary></details>
+<details><summary>sorting</summary></details>
+<details><summary>texts</summary></details>
+<details><summary>udf</summary></details>
+<details><summary>vegetation indices</summary></details>
+
+
+
+
+
+
+
+
+
+
+
 
 # Experimental processes
-- resample_cube_temporal
 - aggregate_spatial_window
 
 
